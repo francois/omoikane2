@@ -8,14 +8,15 @@
 
   <section class="top-bar-section">
   <ul class="left">
-    <li><a href="/queries/new">New Query</a></li>
+    <li>{{link-to 'New Query' 'queries'}}</li>
+    <li>{{link-to 'All Queries' 'queries'}}</li>
   </ul>
   </section>
   </nav>
 </div>
 
+<br>
+
 <div class="row">
-  <div class="large-12 columns">
-    {{outlet}}
-  </div>
+  {{outlet}}
 </div>

@@ -1,3 +1,3 @@
 class QuerySerializer < ActiveModel::Serializer
-  attributes :id, :ref, :author, :title, :sql
+  attributes :id, :author, :title, :sql, :created_at, :updated_at
 end

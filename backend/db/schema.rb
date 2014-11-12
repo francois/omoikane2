@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20141111153544) do
   end
 
   create_table "queries", force: true do |t|
-    t.text     "ref",        null: false
     t.text     "author",     null: false
     t.text     "title",      null: false
     t.text     "sql",        null: false

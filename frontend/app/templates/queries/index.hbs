@@ -1,0 +1,23 @@
+<div class="large-12 columns">
+  <table>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Created</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each}}
+      <tr>
+        <td>{{author}}</td>
+        <td>{{formatted-date createdAt 'MMM Do h:mm A'}}</td>
+        <td>{{title}}</td>
+      </tr>
+      {{else}}
+      <tr colspan="3">No queries</tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{outlet}}
+</div>
