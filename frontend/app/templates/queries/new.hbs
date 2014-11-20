@@ -1,0 +1,19 @@
+<form method="post">
+  <div class="large-4 columns">
+    <label for="author">Author</label>
+    {{input placeholder="Author" required="required" name="query[author]" value=author}}
+  </div>
+  <div class="large-8 columns">
+    <label for="title">Title</label>
+    {{input placeholder="Title" required="required" name="query[title]" value=title}}
+  </div>
+  <div class="large-12 columns">
+    <label for="sql">Query Text</label>
+    {{textarea placeholder="SELECT * FROM ..." name="query[sql]" rows="10" value=sql}}
+  </div>
+  <div class="large-12 columns">
+    <button {{action "submit"}}>Submit</button>
+    or
+    {{link-to "Cancel" "queries"}}
+  </div>
+</form>

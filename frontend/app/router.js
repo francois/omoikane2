@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('queries', function() {
+    this.route('new');
     this.resource('query', { path: '/:query_id' });
   });
 });

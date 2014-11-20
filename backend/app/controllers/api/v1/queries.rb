@@ -1,3 +1,4 @@
+require "yaml"
 module API
   module V1
     class Queries < Grape::API
@@ -15,6 +16,16 @@ module API
         end
         get ":id", root: "query" do
           Query.where(id: permitted_params[:id]).first!
+        end
+
+        post do
+          query = params.query
+
+          Query.create! do |model|
+            model.author = query.author
+            model.title  = query.title
+            model.sql    = query.sql
+          end
         end
       end
     end
